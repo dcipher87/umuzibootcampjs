@@ -1,0 +1,497 @@
+<!doctype html>
+<html>
+
+<head><title>JavaScript Basics</title>
+</head>
+
+<body>
+<h1> JavaScript Basics </h1>
+
+<h2> Comments </h2>
+<p> Comments are lines of code that will be intentionally ignored, they may be used to leave notes about what the code should do</p>
+<p> there are 2 ways to write comments in JavaScript:</p>
+<ul>
+	<li> in-line comments: //</li>
+	<li> multi-line comments: /*<br> */
+</ul>
+
+<h2> Variables </h2>
+<p> In computer science, data is anything that is meaningful to the computer.<br> JavaScript provides 8 different data types which are:
+	<ul>
+		<li>undefined</li>
+		<li>null</li>
+		<li>boolean</li>
+		<li>string</li>
+		<li>symbol</li>
+		<li>bigint</li>
+		<li>number</li>
+		<li>object</li>
+	</ul>
+<p> Computers can perfomr mathematical operations on a number, but not on a string. Computers distinguish between numbers like "12" and strings like "12", "dog" or "123 cats"</p>
+
+<p>Variables allow computers to store and manipulate data inna dynamic fashion. They do this by using a "label" to point to the data rather than using the data itself. Any of the 8 data types may be stored in a variable</p>
+<p>Computer variables differ from mathematical variable in that they can store different values at different times.</p>
+
+<p>We tell JavaScript to create or declare a variable by putting the keyword VAR in from of it like so:</p>
+
+<p> var ourName; creates a variable called ourName. 
+</p>
+<p>In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number.</p>
+
+<h2> Storing Values with the Assignment Operator</h2>
+<p>In JavaScript, you can store a value in a variable with the assignment operator.</p>
+
+<p>myVar =5;</p>
+<p>This assigns the Number value 5 to myVariable</p>
+<p>Assignment always goes from right to left. Everything to the right of the = operator is resolved before the value is assigned to the variable to the left of the operator</p>
+<p>myVar = 5;</p>
+<p>myNum = myVar;</p>
+<p>This assigns the value of 5 to myVar, and then resolves myVar to 5 again and assigns it to myNum.</p>
+
+<h2>Initializing Variable with the Assignment Operator</h2>
+<p>It is common to initializa a variable to an initial value in the same line as it is declared.</p>
+<p>var myVar = 0;</p>
+<p>Creates a new variable called myVar and assigns it an initial value of 0.</p>
+
+<h2>Understanding Uninitialized Variable</h2>
+<p>When JavaSCript variable are declared, they have an initial value of undefined. If you do a mthematixcal operation on an undefined variable your result will be NaN (not a number). If you concatenate a string with an undefined variable, you will get a literal string of "undefined".</p>
+
+<h2>Uderstanding Case Sensitivity in Variables</h2>
+
+<p>In JavaScript all variables and function names are case sensitive, capitalisation matters. MYVAR is not the same as MyVar nor myvar. It is possible to have multiple distinct variables with the same name but different casing. It is strongly recommended that for the sake of clarity, you do NOT use this language feature</p>
+
+<p>Best Practice</p>
+<p>Write variable names in JavaScript in camelCase. In camelCase, multi-word variable names have the first word in lowercase and the first letter of each subsequent word is capitalised</p>
+
+<h2>Add Two Numbers with JavaScript</h2>
+<p>Number is data type in JavaScript which represents numeric data.</p>
+<p>JavaScript uses the + symbol as an addition operator when placed between two numbers</p>
+
+<h2>Subtract One Number from Another with JavaScript</h2>
+<p>We can also subtract one number from another. JavaScript uses the - symbol for subtraction.</p>
+
+<h2>Multiply Two Numbers with JavaScript</h2>
+<p>We can also multiply one number by another. JavaScript uses the * symbol for multiplication of two numbers.</p>
+
+<h2>Divide One Number by Another with JavaScript</h2>
+<p>We can also divide one number by another. JavaScript uses the / symbol for division.</p>
+
+<h2>Increment a Number with JavaScript</h2>
+<p>You can easily increment or add one to a variable with the ++ operator</p>
+<p>i++;</p>
+<p>is the equivalent of:</p>
+<p>i = i + 1</p>
+<p>The entire line becomes i++; eliminating the need for the equal sign.</p>
+
+<h2>Decrement a Number with JavaScript</h2>
+<p>You can easily decrement or decrease a variable by one with the -- operator.</p>
+<p>The entire line becomes i--; eliminating the need for the equal sign.</p>
+
+<h2>Create Decimal Numbers with JavaScript</h2>
+<p>We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.</p>
+
+<h2>Multiply Two Decimals with JavaScript</h2>
+<p>In JavaScript you can also perform calculations with decimals numbers, just like whole numbers.</p>
+
+<h2>Finding a Remainder in JavaScript</h2>
+<p>The remainder operator % gives the remiander of the division of two numbers.</p>
+
+<p> 5 % 2 = 1 because</p>
+<p> Math.floor ( 5 / 2 ) = 2 (quotient)</p>
+<p> 2 * 2 = 4</p>
+<p> 5 - 4 = 1 (remainder)</p>
+
+<p>Usage</p>
+<p>In mathematics, a number can be checked to be even or odd by checking the remainder of the division of the number by 2.</p>
+
+<p> 17 % 2 = 1 (17 odd)</p>
+<p> 48 % 2 = 0 (48 is even)</p>
+
+<p>Note</p>
+<p>The remainder operator is sometimes incorrectly referredt to as the "modulus" operator. It is very similar to the modulus, but doesn't work properly with negative numbers.</p>
+
+<p>Compound Assingment With Augmented Addition</p>
+<p>In programming it is common to use assignments to modify the contents of a variable. Remeber that everything to the right of the equals sign is evaluated first, so we can say:</p>
+<p>myVar = myVar + 5;</p>
+<p>to add 5 to myVar. Since thisw is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.</p>
+<p>One such operator is the += operator.</p>
+<p> var myVar = 1;</p>
+<p> myVar += 5;
+<p>console.log(myVar); //returns 6</p>
+
+<h2>Compound Assignment With Augmented Subtraction</h2>
+<p>Like the += operator, -= subtracts a number from a variable.</p>
+<p> myVar = myVar - 5;</p>
+<p> will subtract 5 from myVar. This can be rewritten as:</p>
+<p> myVar -= 5;</p>
+
+<h2>Compound Assignment With Augmented Multiplication</h2>
+<p>The *= operator multiplies a variable by a number.</p>
+<p>myVar = myVar * 5;</p>
+<p>will multiply myVar by 5. This can be rewritten as:</p>
+<p>myVar *= 5;</p>
+
+<h2>Compound Assignment With Augmented Division</h2>
+<p>The /= operator divides a variable by another number</p>
+<p>myVar = myVar /5. This can be rewritten as:</p>
+<p>myVar /= 5;</p>
+
+<h2>Declare String Variables</h2>
+<p>Previously we have used the code:</p>
+<p>var myName = 'your name';</p>
+<p>'your name' is caalled a string literal. It is a string because it is a series of zero or more characters enclosed in single or double quotes</p>
+<p> var myFirstName = 'Khayalethu';</p>
+<p> var myLastName = 'Ubisi';</p>
+<p> var myKnownAsName = 'Khaya';</p>
+
+<h2>Escaping Literal Qoutes in Strings</h2>
+<p>When you are defining a string you must start and end with a single of double quotes. What happens when you need a literal quote:'', " " inside your string?</p>
+<p>In JavaScript, you can escape a quote from considering it as an end of string quote by placing a backslash (\) in front of the quote.</p>
+<p> var sampleStr = 'Alan said, \"Khaya is learning JavaScript\".';</p>
+<p>This signals to JavaScript that the folling quote is not the end of the string, but should instead appear inside the string. So if you were to print this to the console, you would get:</p>
+<p> Alan said, "Khaya is learning JavaScript".</p>
+<p> var myStr = "I am a \"double quoted\" string inside \"double qoutes\".";</p>
+
+<h2> Qouting Strings with Single Quotes</h2>
+
+<p> String values in JavaScript may be written with single of double quotes, as long as you start and end with the same type of quote. Unlike some other programming languages, single and double quotes work the same in JavaScript.</p>
+
+<p> doubleQouteStr = "This is a string";</p>
+<p> singleQouteStr = 'This is also a string';</p>
+
+<p> The reason why you might want to use one type of quote over the other is if you want to use both in a string. This might happen if you want to save a conversation in a string and have the conversation in quotes, all within a string.</p>
+<p> conversation = 'Finn exclaims to Jake, "Algebraic!"';</p>
+
+<p>However, this becomes a problem if you need to use the outermost quotes within it. Remember, a string has the same kind of quote at the beginning and end. But if you have the same quote somewhere in the middle, the string will stop early and throw an error.</p>
+<p> goodStr = 'Jake asks Finn, "hey, let\'s go on an adventure?"';</p>
+<p>badStr = 'Finn responds, "let's go!"'; //throws an error</p>
+<p>In ther goodStr above, yo can use both quotes safely by using the backslash \ as an escape character. Note:</p>
+<p>The backslash \ should not be confused with the forward slash /. They do not do the same thing.</p>
+
+<h2>Escape Sequences in Strings</h2>
+
+<p>Quotes are not the only characters that can be escaped inside a string. There are two reasons to use escaping characters:</p>
+<p>1. To allow you to use characters yo may not otherwise be able to type out, such as a carriage return.</p>
+<p>2. To allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.</p>
+<ul>
+	<li> \' single quote</li>
+	<li> \" double quote</li>
+	<li> \\ backslach</li>
+	<li> \n newline</li>
+	<li> \r carriage return</li>
+	<li> \t tab</li>
+	<li> \b word boundary</li>
+	<li> \f form feed</li>
+</ul>
+<p>Note that the backslach itself must be escaped in order to display as a backslash.</p>
+
+<h2>Concatenating Strings with Plus Operator</h2>
+<p>In JavaScript, when the + operator is used with a String value, it is called the concatenantion operator. You can build a new string out of other strings by concatenating them together.</p>
+<p>Example</p>
+<p>"My name is Alan," + "I concatenate"</p>
+<p>Note</p>
+<p>Watch out for spaces. Concatenantion does not add spaces between concatenated strings, so you'll need to add them yourself</p>
+<p>Example</p>
+<p>var ourStr = "I come first. " + "I come second.";</p>
+<p> ourStr is "I come first. I come second."</p>
+
+<h2>Concatenating Strings with the Plus Equals Operator</h2>
+<p>We can also use the += operator to concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.</p>
+<p>Note</p>
+<p>Watch for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.</p>
+<p>Example</p>
+<p> var ourStr = "I come first.";</p>
+<p> ourStr += "I come second.";</p>
+<p> ourStr is now "I come first.I come second"</p>
+
+<h2>Constructing String with Variable</h2>
+<p>Sometimes you need to build a string, madlibs style. By using the concatenation operator (+), you can insert one or more variables into a string you're building</p>
+<p>Example</p>
+<p> var ourName = "freeCodeCamp";</p>
+<p> var ourStr = "Hello, our name is" + ourName + ", how are you?"</p>
+<p> ourStr is now "Hello, our name is freeCodeCamp, how are you?"</p>
+
+<h2>Appending Variables to Strings</h2>
+<p>Just as we can build a string over multiple lines out of string literals, we can also append variables to a string using the plus equals (+=) operator</p>
+<p>Example</p>>
+<p> var anAdjective = "awesome!";</p>
+<p> ourStr = "freeCodeCamp is ";</p>
+<p> ourStr += anAdjecive;</p>
+<p> ourStr is now "freeCodeCamp is awesome!"</p>
+
+<h2> Find the Length of a String</h2>
+<p> You can find the length of a String value by writing .length after the string variable or string literal.</p>
+<p> "Alan Peter".lenght; //10</p>
+<p> For example, if we created a variable var firstName = "Charles", we could find out how long the string "Charles" is by using the firstName.length property.</p>
+
+<h2> Use Bracket Notation to Find the First Character in a String</h2>
+<p> Bracket notation is a way to get a character at a specific index within a string</p>
+<p> Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as Zero-based indexing</p>
+<p> For example, the character at index 0 in the word "Charles" is "C". So if var firstNmae = "Charles", you can get the value of the first letter or the string by using firstName[0].</p>
+
+<p> Example</p>
+<p> var firstName = "Charles";</p>
+<p> var firstLetter = firstName[0]; // firstLetter is "C"</p>
+
+<h2> Understand String Immutability</h2>
+<p> In JavaScript, String values are immutable, which means that they cannot be altered once created.</p>
+<p> For example, the following code:</p>
+<p> var myStr = "Bob";</p>
+<p> myStr[0] = "J";</p>
+<p> cannot change the value of myStr to "Job", because the contents of myStr cannot be altered. NOte that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string like this:</p>
+<p> var myStr = "Bob";</p>
+<p> myStr = "Job";</p>
+
+<h2> Use Bracket Notation to Find the Nth Character in a String</h2>
+<p> You can also use bracket notation to get the character at other positions within a string.</p>
+<p> Remember that computers start counting at 0, so the first character is actually the zeroth character.</p>
+<p> Example</p>
+<p> var firstName = "Ada";</p>
+<p> var secondLetterOfFirstName = "firstName[1];" // secondLetterOfFirstName is "d".</p>
+
+<h2> Use Bracket Notation to Find the Last Character in a String</h2>
+<p> In order to get the last letter of a string, you can subtract one from the string's length.</p>
+<p> For example, if var firstName = "Charles", you can get the value of the last letter of the string by using firstName[firstName.length -1].</p>
+<p> Example</p>
+<p> var firstName = "Charles";</p>
+<p> var lastLetter = firstName[firstName.length -1]; // lastLetter is "s".</p>
+
+<h2> Use Bracket Notation to Find the Nth-to-Last Character in a String</h2>
+<p> For example, you can get the value of the third-to-last letter of the var firstName = "Charles" string by using firstName[firstName.length - 3].</p>
+<p> Example</p>
+<p> var firstName = "Charles";</p>
+<p> thirdToLastLetter = firstName[firstName.length -3] // thirdToLastLetter is "l".</p>
+
+<h2> Store Multiple Values in one Variable using JavaScript Arrays</h2>
+<p> With JavaScript array variables, we can store several pieces of data in one place.</p>
+<p> You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:</p>
+<p> var sandwich = ["peanut butter", "jelly", "bread"].</p>
+</p> var scores = ["Pirates", 3]</p>
+
+<h2> Nest one Array within Another Array</h2>
+<p> You can also nest arrays within other arrays, like below:</p>
+<p> [["Bulls", 23], ["White Sox", 45]]</p>
+<p> This is also called a multi-dimensional array.</p>
+
+<h2> Access Array Data with Indexes</h2>
+<p> We can access the data insude arrays using indexes</p>
+<p> Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, array use zero-based indexing, so the first element in an array has an index of 0.</p>
+<p> Example</p>
+<p> var array = [50,60,70];</p>
+<p> array [0]; // equals 50. </p>
+<p> var data = array[1]; equals 60</p>
+<p> Note</p>
+<p> There shouldn't be any spaces between the array name and the square brackets, like array array [0]. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code</p>
+
+<h2> Modify Array Data With Indexes</h2>
+<p> Example </p>
+<p> var ourArray = [50,40,30];</p>
+<p> ourArray[0] = 15; // equals [15,40,30]</p>
+
+<h2> Access Multi-Dimensional Arrays With Indexes</h2>
+<p> One way to think of multi-dimensional array is an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside</p>
+<p> Example</p>
+<p> var arr = [</p>
+<p> [1,2,3],</p>
+<p> [4,5,6],</p>
+<p> [7,8,9],</p>
+<p> [[10,11,12],13,14]</p>
+<p>	] </p>
+<p> arr[3]; // equals [[10,11,12],13,14]</p>
+<p> arr[3][0]; // equals [10,11,12]</p>
+<p> arr[3][0][1]; // equals 11</p>
+
+<h2> Manipulate Arrays With push()</h2>
+<p> An easy way to append data to the end of an array is via the push() function.</p>
+<p> .push() takes one or more parameters and "pushes" the onto th end of the array.</p>
+<p> Examples:</p>
+<p> var arr1 = [1,2,3];</p>
+<p> arr1.push(4); // array is now [1,2,3,4]</p>
+<p> var arr2 = ["Stimpson", "J", "Cat"];</p>
+<p> arr2.push(["happy", "joy"]); // arr2 now equals ["Stimpson", "J", "Cat", ["happy", "joy"]]. </p>
+
+<h2> Manipulate Array With pop()</h2>
+<p> Another way to change the data in an array is with the .pop() function</p>
+<p> .pop() is used to pop a value off of the end of an array. We can store this "popped off" value by assigning it to a variable. In other words .pop() removes the last element from an array and returns that element.</p>
+<p> Any type of entry can be "popped" off of an array - numbers, strings, even nested arrays.</p>
+<p> Example</p>
+<p> var threeArr = [1,4,6];</p>
+<p> var oneDown = threeArr.pop();</p>
+<p> console.log(oneDown); // returns 6 </p>
+<p> console.log(threeArr); // returns [1,4]</p>
+
+<h2> Manipulate Arrays With shift()</h2>
+<p> pop() always removes the last element of an array. What if you want to remove the first?</p>
+<p> That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.</p>
+<p> Example</p>
+<p> var ourArray = ["Stimpson", "J", ["Cat"]];</p>
+<p> var removedFromOurArray = ourArray.shift();</p>
+<p> // removedFromOurArray now equals "Stimpson" and ourArray now equals ["J",["Cat"]. </p>
+
+<h2> Manipulate Arrays With unshift()</h2>
+<p> Not only can you shift elements off of the beginning of an array, you can also unshift elements to the beginning of an array i.e. add elements in front of the array.</p>
+<p> .unshift() works exactly like .push(), but instead of adding the element at the edn of the array, unshift() adds the element at the beginning of the array.</p>
+<p>Example</p>
+<p> var ourArray = ["Stimpson", "J", "cat"];</p>
+<p> ourArray.shift(); // ourArray now equals ["J", "cat"]</p>
+<p> ourArray.unshift("Happy"); // ourArray now equals ["Happy", "J", "cat"].</p>
+
+<h2> Write Reusable JavaScript with Functions</h2>
+<p> In JavaScript, we can divide up our code into reusable parts called functions.</p>
+<p> Here's an example of a function:</p>
+<p> function functionName(){</p>
+<p>  console.log("Hello World");</p>
+<p> }</p>
+
+<p> You can call or invoke this function by using its name followed by parenthese, like this: functionName(); Each time the function is called it will print out the message "Hello World" on the dev console. All of the code between the curly braces will be executed every time the function is called.</p>
+
+<h2> Passing Values to Functions with Arguments</h2>
+<p> Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.</p>
+<p> Here is a function with two parameters, param1 and param2:</p>
+<p> function testFun(param1, param2) {
+console.log(param1, param2);</p>
+<p>}</p>
+
+<p> Then we can call testFun: testFun("Hello", "World"); We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". Note that you can call testFun again with different arguments and the parameters would take on the value of the new arguments</p>
+
+<h2> Global Scope and Functions</h2>
+<p> In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have a Global scope. This means, they can be seen everywhere in your JavaScript code.</p>
+<p> Variables which are used without the var keyword are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with var.</p>
+
+<h2> Local Scope and Functions</h2>
+<p> Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.</p>
+<p> Here is a function myTest whith a local variable called loc.</p>
+<p> function myTest(){</p>
+<p> var loc = "foo";</p>
+<p> console.log(loc);</p>
+<p>}</p>
+<p> myTest(); // logs "foo"</p>
+<p> console.log(loc); // loc is not defined</p>
+<p> loc is not defined outside the function</p>
+
+<h2> Global vs Local Scope in Functions</h2>
+<p> It is possible to have both local and global variables with the same name. When you do this , the local variable takes precedence over the global variable.</p>
+<p> In this example:</p>
+<p> var someVar = "Hat";</p>
+<p> function myFun(){ </p>
+<p> var someVar = "Head";</p>
+<p> return someVar;</p>
+<p>}</p>
+<p> The function myFun will return "Head" because the local version of the variale  is present.</p>
+
+<h2> Return a Value from a Function with Return</h2>
+<p> We can pass values into function with arguments. You can use a return statement to send a value back out of a function. </p>
+<p> Example</p>
+<p> function plusThree(num){</p>
+<p>	return num + 3;</p>
+<p> }</p>
+<p> var answer = plusThree(5); // 8</p>
+<p> plusThree takes an argument for num and returns a value equal to num + 3.</p>
+
+<h2> Understanding Undefined Value returned from a Function</h2>
+<p> A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined</p>
+<p> Example</p>
+<p> var sum = 0;</p>
+<p> function addSum(num){ </p>
+<p>	sum = sum + num; </p>
+<p> }</p>
+<p> addSum(3); // sum will be modified but returned value is undefined.</p>
+<p> addSum is a function wihtout a return statement. The function will change the global sum variable but the returned value of the function is undefined.</p>
+
+<h2> Assingment with a Returned Value</h2>
+<p> If you'll recall from our discussion of storing values with the assignment operator, everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.</p>
+<p> Assume we have pre-defined a function sum which adds two numbers together, then: </p>
+<p> ourSum = sum(5, 12);</p>
+<p> will call sum function, which returns a value of 17 and assigns it to ourSum variable.</p>
+;
+<h2> Stand in Line</h2>
+<p> In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.</p>
+<p> Write a function nextInLine which takes an array (arr) and a number (item) as arguments. Add the number to the end of the array, then remove the first element of the array.</p>
+<p> The nextInLine function should then return the element that was removed.</p>
+<p> Solution</p>
+<p> function nextInLine(arr,item) {
+<p>	arr.push(item); //push item at the end of arr</p>
+<p> var removed = arr.shift(); //gets the first item in array and stores it in removed</p>
+<p> return removed; or return arr.shift();</p>
+<p> } </p>
+
+<h2> Understanding Boolean Values</h2>
+<p> Another data type is the Boolean. Booleans may only be on of two values: true or false. They are basically little on-off switches, where true is "on" and false is "off". These two states are mutually exclusive</p>
+<p> Note</p>
+<p> Boolean values are NEVER written wtith quotes. The strings "true" and "false" are not Boolean and have no special meaning in JavaScript</p>
+
+<h2> Use Conditional Logic with If Statements</h2>
+<p> If statements are used to make decisions in code. The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as Boolean conditions and they may only be true or false.</p>
+<p> When the condition evaluates to true, the program executes the statement inside the curly brackets. When the Boolean condition evaluates to false, the statement inside the curly braces will not execute.</p>
+
+<p> Pseudocode</p>
+<p> if (conditon is true) {</p>
+<p> statement is executed</p>
+<p> } </p>
+<p> function test(myCondition) { </p>
+<p> 	if (myCondition) {</p>
+<p> 		return "It was true";</p>
+<p> 	}</p>
+<p> return "It was false";</p>;
+<p> }</p>
+<p> test(true); // returns "It was true"</p>
+<p> test(false); // returns "It was false"</p>
+
+<p> Whe test is called with a value of true, the if statement evaluates myCondition to see if it is true or not. Since it is true, the function returns "It was true". When we call test with a value of false, myCondition is not true and the statement in the curly braces is not executed and the function returns "It was false".</p>
+
+<h2> Comparison with the Equality Operator</h2>
+<p> Ther are many comparison operators in JavaScript. All of these operators return a boolean true or false value.</p>
+<p> The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Not that equality is different from assignment (=), which assignes the value on the right of the operator to a variable on the left</p>
+
+<p> function equalityTest(myVal){</p>
+<p> if (myVal == 10){<p>
+	<p> return "Equal";</p>
+<p> }<p>
+	<p> return "Not Equal";</p>
+<p>}</p>
+
+<p> If myVal is equal to 10, the equality operator returns true, so the code in the curly braces will execute, and the function will return "Equal". Otherwise, the function will return "Not Equal". </p>
+<p> In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as "Type Coercion". Once it does, however, it can compare terms as follows:</p>
+
+<p> 1 == 1 // true</p>
+<p> 1 == 2 // false</p>
+<p> 1 == '1' // true</p>
+<p> "3" == 3 // true </p>
+
+<h2> Comparison with the Strict Equality Operator</h2>
+<p> Strict equality (===) is the counterpart to the equality operator(==). However unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform type conversion.</p>
+<p> If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.</p>
+
+<p> Examples</p>
+<p> 3 === 3 // true</p>
+<p> 3 === '3' // false</p>
+<p> In the second example, 3 is a number type and '3' is a string type</p>
+
+<h2> Comparison with the Inequality Operator</h2>
+<p> The inequality operator (!=) is the opposite of the equality operator. It means "Not Equal" and returns false where equality would return true and vice versa. Like the equality operator, the inequality operator will convert data types of values while comparing</p>
+<p> Examples</p>
+<p> 1 != 2 // true</p>
+<p> 1 != "1" // false</p>
+<p> 1 != '1' // false</p>
+<p> 1 != true // false</p>
+<p> o != false // false</p>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+<!-- html comments -->
+
+<!--
+Call the processArg function with an argument of 7 and assign its return value to the variable processed.
+
+function ourSum(num1, num2){
+return num1 + num2;
+}
+	-->
